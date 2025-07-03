@@ -161,7 +161,7 @@ namespace SISTEMA_PORTAFOLIO_LLICA_PEREZ
             string docentePath = Path.Combine(basePath, nombreDocente);
             Directory.CreateDirectory(docentePath);
 
-            string cvPath = Path.Combine(docentePath, "Curriculum_Vitae");
+            string cvPath = Path.Combine(docentePath, "1.Curriculum_Vitae");
             if (!Directory.Exists(cvPath))
             {
                 Directory.CreateDirectory(cvPath);
@@ -172,18 +172,95 @@ namespace SISTEMA_PORTAFOLIO_LLICA_PEREZ
             string cursoPath = Path.Combine(docentePath, nombreCurso);
             Directory.CreateDirectory(cursoPath);
 
-            // Crear carpetas 2 al 5
-            CrearCarpetaConNota(Path.Combine(cursoPath, "Silabos_UPT_ICACIT"), "Silabo_Formato_ICACIT.docx", "Nota_Silabo_Leer.txt", "Aquí se encuentran los silabos correspondientes.");
-            CrearCarpetaConNota(Path.Combine(cursoPath, "Prueba_de_Entrada"), "1_Informe_Prueba_Entrada_2025-I.docx", "Nota_InformePrueba_Entrada.txt", "Informe de prueba de entrada del curso.");
+            CrearCarpetaConNota(Path.Combine(cursoPath, "2.Silabos_UPT_ICACIT"), "Silabo_Formato_ICACIT.docx", "Nota_Silabo_Leer.txt", "Aquí se encuentran los silabos correspondientes.");
+            CrearCarpetaConNota(Path.Combine(cursoPath, "3.Prueba_de_Entrada"), "1_Informe_Prueba_Entrada_2025-I.docx", "Nota_InformePrueba_Entrada.txt", "Informe de prueba de entrada del curso.");
 
-            string portafolioUnidadPath = Path.Combine(cursoPath, "Portafolio_por_Unidad");
-            foreach (string unidad in new[] { "I_Unidad", "II_Unidad", "III_Unidad" })
-                Directory.CreateDirectory(Path.Combine(portafolioUnidadPath, unidad));
+            string portafolioUnidadPath = Path.Combine(cursoPath, "4.Portafolio_por_Unidad");
+            string[] unidades = { "I_Unidad", "II_Unidad", "III_Unidad" };
 
-            CrearCarpetaConNota(Path.Combine(cursoPath, "Informe_Final"), "5_Informe_Final_2025-I.xlsx", "Nota_InformeFinal.txt", "Informe final del curso.");
+            foreach (string unidad in unidades)
+            {
+                string unidadPath = Path.Combine(portafolioUnidadPath, unidad);
+                Directory.CreateDirectory(unidadPath);
 
+                Directory.CreateDirectory(Path.Combine(unidadPath, "Formato_Notas_Asistencia"));
+
+                string recursosDocentePath = Path.Combine(unidadPath, "Recursos_Docente");
+                Directory.CreateDirectory(Path.Combine(recursosDocentePath, "1.Solucion_Examen"));
+                Directory.CreateDirectory(Path.Combine(recursosDocentePath, "2.Diapositivas"));
+                Directory.CreateDirectory(Path.Combine(recursosDocentePath, "3.Guias_Laboratorio"));
+                Directory.CreateDirectory(Path.Combine(recursosDocentePath, "4.Otros_Recursos"));
+
+                string recursosEstudiantesPath = Path.Combine(unidadPath, "Recursos_Estudiantes");
+                Directory.CreateDirectory(Path.Combine(recursosEstudiantesPath, "1.Examenes"));
+                Directory.CreateDirectory(Path.Combine(recursosEstudiantesPath, "2.Practicas_Calificadas"));
+                Directory.CreateDirectory(Path.Combine(recursosEstudiantesPath, "3.Trabajos"));
+
+                string proyectoFinalPath = Path.Combine(recursosEstudiantesPath, "4.Proyecto_Final");
+                Directory.CreateDirectory(proyectoFinalPath);
+                Directory.CreateDirectory(Path.Combine(proyectoFinalPath, "Formatos_requeridos_por_proyecto"));
+
+                File.WriteAllText(Path.Combine(proyectoFinalPath, "Forma_de_Archivar_Proyecto_Importante.png"), "");
+
+                string nombreArchivoCurso = GenerarNombreArchivoSeguro(nombreCurso);
+                string resumenNombre = $"RESUMEN_{nombreArchivoCurso}.xlsx";
+                string rutaResumen = Path.Combine(proyectoFinalPath, resumenNombre);
+
+                // Validar que la ruta no sea demasiado larga
+                if (rutaResumen.Length >= 250)
+                {
+                    // Generar acrónimo más corto si aún es muy largo
+                    string acronimoCorto = GenerarAcronimo(nombreCurso);
+                    resumenNombre = $"RESUMEN_{acronimoCorto}.xlsx";
+                    rutaResumen = Path.Combine(proyectoFinalPath, resumenNombre);
+                }
+
+                // Intentar guardar el archivo Excel
+                try
+                {
+                    using (var wb = new XLWorkbook())
+                    {
+                        var ws = wb.Worksheets.Add("Resumen");
+                        ws.Cell("A1").Value = "Resumen de entregables para el curso.";
+                        wb.SaveAs(rutaResumen);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al guardar archivo Excel:\n" + ex.Message + "\nRuta: " + rutaResumen, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+                Directory.CreateDirectory(Path.Combine(recursosEstudiantesPath, "5.Otros"));
+
+                File.WriteAllText(Path.Combine(unidadPath, "Nota_Unidad.txt"), $"Esta carpeta contiene los archivos de la {unidad.Replace("_", " ")}.");
+            }
+
+            CrearCarpetaConNota(Path.Combine(cursoPath, "5.Informe_Final"), "5_Informe_Final_2025-I.xlsx", "Nota_InformeFinal.txt", "Informe final del curso.");
             File.WriteAllText(Path.Combine(cursoPath, "Nota_Curso.txt"), $"Portafolio para el curso {nombreCurso}");
         }
+
+        private string GenerarAcronimo(string texto)
+        {
+            var palabras = texto.Split(new[] { ' ', '_', '-' }, StringSplitOptions.RemoveEmptyEntries);
+            string acronimo = string.Join("", palabras.Select(p => char.ToUpperInvariant(p[0])));
+
+            if (string.IsNullOrWhiteSpace(acronimo) || acronimo.Length < 3)
+                acronimo = "ACR_" + Math.Abs(texto.GetHashCode()).ToString();
+
+            // Truncar si aún es largo
+            return acronimo.Length > 20 ? acronimo.Substring(0, 20) : acronimo;
+        }
+
+        private string GenerarNombreArchivoSeguro(string nombreCurso)
+        {
+            string limpio = LimpiarNombreArchivo(nombreCurso);
+            // Limitar el nombre limpio si sigue siendo largo
+            if (limpio.Length > 100)
+                return GenerarAcronimo(nombreCurso);
+            return limpio;
+        }
+
 
         private void CrearCarpetaConNota(string ruta, string archivo, string nota, string contenidoNota)
         {
@@ -194,8 +271,14 @@ namespace SISTEMA_PORTAFOLIO_LLICA_PEREZ
 
         private string LimpiarNombreCarpeta(string nombre)
         {
-            char[] caracteresInvalidos = Path.GetInvalidFileNameChars();
-            foreach (char c in caracteresInvalidos)
+            foreach (char c in Path.GetInvalidFileNameChars())
+                nombre = nombre.Replace(c, '_');
+            return nombre.Trim();
+        }
+
+        private string LimpiarNombreArchivo(string nombre)
+        {
+            foreach (char c in Path.GetInvalidFileNameChars())
                 nombre = nombre.Replace(c, '_');
             return nombre.Trim();
         }
