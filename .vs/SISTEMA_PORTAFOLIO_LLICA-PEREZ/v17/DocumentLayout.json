@@ -1,14 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\HP\\source\\repos\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\",
+  "WorkspaceRootPath": "C:\\Users\\HOME\\Desktop\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2A3F8EFC-957B-4448-B651-07AEF94F7817}|SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ.csproj|c:\\users\\hp\\source\\repos\\sistema_portafolio_llica-perez\\sistema_portafolio_llica-perez\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2A3F8EFC-957B-4448-B651-07AEF94F7817}|SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ.csproj|c:\\users\\home\\desktop\\sistema_portafolio_llica-perez\\sistema_portafolio_llica-perez\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2A3F8EFC-957B-4448-B651-07AEF94F7817}|SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ.csproj|solutionrelative:sistema_portafolio_llica-perez\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2A3F8EFC-957B-4448-B651-07AEF94F7817}|SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ.csproj|C:\\Users\\HP\\source\\repos\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\sistema_portafolio_llica-perez\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2A3F8EFC-957B-4448-B651-07AEF94F7817}|SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ.csproj|C:\\Users\\HOME\\Desktop\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\sistema_portafolio_llica-perez\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2A3F8EFC-957B-4448-B651-07AEF94F7817}|SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ.csproj|solutionrelative:sistema_portafolio_llica-perez\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3F8EFC-957B-4448-B651-07AEF94F7817}|SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ.csproj|C:\\Users\\HOME\\Desktop\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\sistema_portafolio_llica-perez\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A3F8EFC-957B-4448-B651-07AEF94F7817}|SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ.csproj|solutionrelative:sistema_portafolio_llica-perez\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A3F8EFC-957B-4448-B651-07AEF94F7817}|SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ.csproj|C:\\Users\\HOME\\Desktop\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\sistema_portafolio_llica-perez\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2A3F8EFC-957B-4448-B651-07AEF94F7817}|SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ.csproj|solutionrelative:sistema_portafolio_llica-perez\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,11 +32,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\HOME\\Desktop\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form1.cs",
               "RelativeDocumentMoniker": "SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form1.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form1.cs",
+              "ToolTip": "C:\\Users\\HOME\\Desktop\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form1.cs",
               "RelativeToolTip": "SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form1.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAANoAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAKUCAAAAAAAAAAAkwNsCAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-03T15:39:02.777Z",
               "IsPinned": true,
@@ -36,15 +44,37 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\HOME\\Desktop\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form2.cs",
+              "RelativeDocumentMoniker": "SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form2.cs",
+              "ToolTip": "C:\\Users\\HOME\\Desktop\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form2.cs",
+              "RelativeToolTip": "SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form2.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAAwJoAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T02:32:11.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form2.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\HOME\\Desktop\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form2.cs",
+              "RelativeDocumentMoniker": "SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form2.cs",
+              "ToolTip": "C:\\Users\\HOME\\Desktop\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form2.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form2.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T01:42:07.09Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\HOME\\Desktop\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form1.cs",
               "RelativeDocumentMoniker": "SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form1.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\HOME\\Desktop\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "SISTEMA_PORTAFOLIO_LLICA-PEREZ\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T15:38:57.213Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-07-03T15:38:57.213Z"
             }
           ]
         }
